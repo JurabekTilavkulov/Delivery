@@ -101,9 +101,11 @@ class _Page1State extends State<Page1> {
               padding: EdgeInsets.all(5),
               children: <Widget> [
                 Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Nearby")),
-                Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Nearby")),
-                Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Nearby")),
-                Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Nearby")),
+                Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Trivia")),
+                Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Express")),
+                // Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Asia")),
+                // Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Africa")),
+                // Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "America")),
 
 
 
@@ -136,7 +138,6 @@ class _Page1State extends State<Page1> {
       ),
 
       bottomNavigationBar: CurvedNavigationBar(
-
         backgroundColor: Colors.white,
         buttonBackgroundColor: Color(0xFFE92F48),
         color: Color(0xFFE92F48),
