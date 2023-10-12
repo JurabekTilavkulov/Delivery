@@ -5,6 +5,7 @@ class MyCustomButton extends StatefulWidget {
   const MyCustomButton({required this.buttonChild});
    final String buttonChild;
 
+
   @override
   State<MyCustomButton> createState() => _MyCustomButtonState(buttonChild);
 }
@@ -12,9 +13,8 @@ class MyCustomButton extends StatefulWidget {
 class _MyCustomButtonState extends State<MyCustomButton> {
 
   String buttonChild;
-  bool changeColrButtom=false;
-  bool textColrChane=false;
-  bool boxShadowExist=false;
+
+  bool anyChange=false;
 
 
   _MyCustomButtonState(this.buttonChild);
@@ -25,9 +25,7 @@ class _MyCustomButtonState extends State<MyCustomButton> {
 
       onTap: (){
         setState(() {
-          changeColrButtom=!changeColrButtom;
-          textColrChane=!textColrChane;
-          boxShadowExist=!boxShadowExist;
+          anyChange=!anyChange;
         });
       },
       child: Container(
@@ -35,11 +33,11 @@ class _MyCustomButtonState extends State<MyCustomButton> {
 
 
         alignment: Alignment.center,
-        child: Text(buttonChild,style: TextStyle(fontSize: 15,color: textColrChane?Colors.white:Colors.black)),
+        child: Text(buttonChild,style: TextStyle(fontSize: 15,color: anyChange?Colors.white:Colors.black)),
         decoration: BoxDecoration(
-          color: changeColrButtom? Colors.red : Color(0x35909098),
+          color: anyChange? Colors.red : Color(0x35909098),
           borderRadius: BorderRadius.circular(10),
-          boxShadow: boxShadowExist?[BoxShadow(
+          boxShadow: anyChange?[BoxShadow(
             color:Colors.red,
             offset: Offset(2,2),
             blurRadius: 5
@@ -47,5 +45,8 @@ class _MyCustomButtonState extends State<MyCustomButton> {
         ),
       ),
     );
+  }
+  bool bittasi(){
+    return true;
   }
 }

@@ -26,13 +26,12 @@ class _Page1State extends State<Page1> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(           // teppa qator
-            padding: EdgeInsets.only(top:51),
+            padding: EdgeInsets.only(top:50),
 
            child: Row(
              mainAxisAlignment: MainAxisAlignment.spaceAround,
              children: [
                Container(
-
 
                  child: SvgPicture.asset("assets/svg/diladress.svg"),
                ),
@@ -78,6 +77,7 @@ class _Page1State extends State<Page1> {
                 ) ,
               ),
 
+
               Container(
 
                 padding: EdgeInsets.only(left: 10),
@@ -96,24 +96,20 @@ class _Page1State extends State<Page1> {
             padding: EdgeInsets.only(left: 20, top: 10),
 
             width: 490,
-            child: ListView(
+            child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              padding: EdgeInsets.all(5),
-              children: <Widget> [
-                Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Nearby")),
-                Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Trivia")),
-                Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Express")),
-                // Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Asia")),
-                // Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "Africa")),
-                // Container(padding: EdgeInsets.only(right: 10), child: MyCustomButton(buttonChild: "America")),
+              child: Row(
+                children: [
 
-
-
-                // Container(child:MyCustomButton(buttonChild: "Nearby",)),
-                // Container(child:MyCustomButton(buttonChild: "Nearby",)),
-                // Container(child:MyCustomButton(buttonChild: "Nearby",)),
-                // Container(child:MyCustomButton(buttonChild: "Nearby",)),
-              ],
+                  Container(
+                    height: 45, padding: EdgeInsets.only(right: 10,top: 5, bottom: 5), child: MyCustomButton(buttonChild: "Nearby")),
+                  Container(height: 45, padding: EdgeInsets.only(right: 10,top: 5, bottom: 5), child: MyCustomButton(buttonChild: "Trivia")),
+                  Container(height: 45, padding: EdgeInsets.only(right: 10,top: 5, bottom: 5), child: MyCustomButton(buttonChild: "Express")),
+                  Container(height: 45, padding: EdgeInsets.only(right: 10,top: 5, bottom: 5), child: MyCustomButton(buttonChild: "Asia")),
+                  Container(height: 45, padding: EdgeInsets.only(right: 10,top: 5, bottom: 5), child: MyCustomButton(buttonChild: "Africa")),
+                  Container(height: 45, padding: EdgeInsets.only(right: 10,top: 5, bottom: 5), child: MyCustomButton(buttonChild: "America")),
+                ],
+              ),
 
             ),
           ),
